@@ -1,0 +1,4 @@
+numpy
+cohere
+streamlit
+st_btn_select
