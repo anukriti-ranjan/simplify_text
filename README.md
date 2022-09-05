@@ -1,5 +1,7 @@
 [This is a work in progress.]
 
+App URL: https://anukriti-ranjan-simplify-text-main-pot6kd.streamlitapp.com/
+
 The app lets you classify your text into Elementary, Intermediate and Advanced according to the level of complexity.
 
 Simplify functionality lets you generate an alternate simplified version of it.
