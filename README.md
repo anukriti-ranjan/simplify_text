@@ -1,17 +1,41 @@
 [This is a work in progress.]
 
-App URL: https://anukriti-ranjan-simplify-text-main-pot6kd.streamlitapp.com/
+###Introduction
+
+App URL: https://simplified-text.herokuapp.com/
 
 Idea URL: https://docs.google.com/presentation/d/e/2PACX-1vSMrCTVihqxV4poGJ_k-HKpSnCewlI_5i2SxzOGo8LFR7gEQmfVqAMQCAQphr_XiKKXD8JkTi1f1iWa/pub?start=false&loop=false&delayms=10000
 
 
-The app lets you classify your text into Elementary, Intermediate and Advanced according to the level of complexity.
+The app lets you enter the text you would like to simplify and has an interface that comprises a text area and submit button. On submitting, the simplified text is displayed.
 
-Simplify functionality lets you generate an alternate simplified version of it.
+![image](https://user-images.githubusercontent.com/89630232/193754702-17df0f18-befe-439b-b72a-5b9b3fba28ab.png)
+
+The app has been created using the *Flask* framework of python and deployed via *heroku's container registry*.
 
 
-Acknowledgement:
+###Creating docker image
 
-Commonlit dataset was used to train the Classify model.
+`docker build -t <name of the docker image>:<add tag> .`
+`docker run -d -p 5000:5000 <name of the docker image>:<add tag>`
 
-(URL: https://www.commonlit.org/blog/introducing-the-clear-corpus-an-open-dataset-to-advance-research-28ff8cfea84a/)
+###Deploying the image on heroku
+
+`heroku login`
+`heroku container:login`
+`docker tag <name of the docker image>:<add tag> registry.heroku.com/<name of the app on heroku>/web`
+`docker push registry.heroku.com/<name of the app on heroku>/web`
+`heroku container:release web -a <name of the app on heroku>`
+
+
+
+
+
+
+
+
+
+[Acknowledgement:
+
+OpenAI's gpt-3 has been used to generate simplified version of the entered text. The app is solely for demonstration purpose and does not serve any commercial interest.]
+
