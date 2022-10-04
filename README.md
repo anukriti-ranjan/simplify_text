@@ -42,5 +42,5 @@ The app has been created using the *Flask* framework of python and deployed via 
 
 [Acknowledgement:
 
-OpenAI's gpt-3 has been used to generate simplified version of the entered text. The app is solely for demonstration purpose and does not serve any commercial interest.]
+OpenAI's GPT-3 has been used to generate simplified version of the entered text. The app is solely for demonstration purpose and does not serve any commercial interest.]
 
