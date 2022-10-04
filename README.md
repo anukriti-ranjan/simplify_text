@@ -1,6 +1,6 @@
 [This is a work in progress.]
 
-###Introduction
+### Introduction
 
 App URL: https://simplified-text.herokuapp.com/
 
@@ -14,17 +14,22 @@ The app lets you enter the text you would like to simplify and has an interface 
 The app has been created using the *Flask* framework of python and deployed via *heroku's container registry*.
 
 
-###Creating docker image
+### Creating docker image
 
 `docker build -t <name of the docker image>:<add tag> .`
+
 `docker run -d -p 5000:5000 <name of the docker image>:<add tag>`
 
-###Deploying the image on heroku
+### Deploying the image on heroku
 
 `heroku login`
+
 `heroku container:login`
+
 `docker tag <name of the docker image>:<add tag> registry.heroku.com/<name of the app on heroku>/web`
+
 `docker push registry.heroku.com/<name of the app on heroku>/web`
+
 `heroku container:release web -a <name of the app on heroku>`
 
 
