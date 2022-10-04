@@ -14,11 +14,11 @@ The app lets you enter the text you would like to simplify and has an interface 
 The app has been created using the *Flask* framework of python and deployed via *heroku's container registry*.
 
 
-### Creating docker image
+### Creating and running the docker image on local machine
 
-`docker build -t <name of the docker image>:<add tag> .`
+`docker build -t <name of the docker image>:<tag> .`
 
-`docker run -d -p 5000:5000 <name of the docker image>:<add tag>`
+`docker run -d -p 5000:5000 <name of the docker image>:<tag>`
 
 ### Deploying the image on heroku
 
@@ -26,7 +26,7 @@ The app has been created using the *Flask* framework of python and deployed via 
 
 `heroku container:login`
 
-`docker tag <name of the docker image>:<add tag> registry.heroku.com/<name of the app on heroku>/web`
+`docker tag <name of the docker image>:<tag> registry.heroku.com/<name of the app on heroku>/web`
 
 `docker push registry.heroku.com/<name of the app on heroku>/web`
 
